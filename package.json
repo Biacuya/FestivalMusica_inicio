@@ -1,0 +1,28 @@
+{
+  "name": "festivalmusica_inicio",
+  "version": "1.0.0",
+  "description": "Proyecto con Gulp, SASS y HTML",
+  "main": "gulpfile.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "tarea": "gulp tarea"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Biacuya/FestivalMusica_inicio.git"
+  },
+  "keywords": [
+    "Gulp",
+    "SASS"
+  ],
+  "author": "Erik Molina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Biacuya/FestivalMusica_inicio/issues"
+  },
+  "homepage": "https://github.com/Biacuya/FestivalMusica_inicio#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "sass": "^1.52.1"
+  }
+}
