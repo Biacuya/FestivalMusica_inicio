@@ -6,18 +6,24 @@
   h1 {
     color: v.$white;
     text-align: center;
+    @include m.tablet {
+      margin: 0;
+    }
   }
   .contenido-header {
+    padding: 2rem;
     @include m.tablet {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
   }
 }
 
 .navegacion-principal {
-  @include m.phone {
-    color: black;
+  @include m.tablet {
+    display: flex;
+    gap: 2rem;
   }
   a {
     display: block;
@@ -25,6 +31,9 @@
     margin-bottom: 1rem;
     color: v.$white;
     font-size: 2.4rem;
+    @include m.tablet {
+      margin: 0;
+    }
     &:hover {
       color: v.$yellow;
     }
