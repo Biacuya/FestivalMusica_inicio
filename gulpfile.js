@@ -52,8 +52,16 @@ function versionAvif(callback) {
     callback();
 }
 
+function javaScript(callback) {
+    src("src/js/**/*.js")
+        .pipe(dest("build/js"));
+    callback()
+
+}
+
 function dev(callback) {
     watch("src/scss/**/*.scss", css);
+    watch("src/js/**/*.js", javaScript);
     callback();
 }
 
@@ -61,4 +69,5 @@ exports.css = css; //exports es codigo node
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel(imagenes, versionWebp, versionAvif, dev); //parallel ejecuta todas las funciones al mismo tiempo
+exports.javaScript = javaScript;
+exports.dev = parallel(imagenes, versionWebp, versionAvif, javaScript, dev); //parallel ejecuta todas las funciones al mismo tiempo
